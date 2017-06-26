@@ -1,0 +1,21 @@
+{
+  "name": "FIXME",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Adrien Cadet"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/acadet/web-boilerplate",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bourbon": "^4.3.4"
+  }
+}

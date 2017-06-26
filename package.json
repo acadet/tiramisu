@@ -1,0 +1,28 @@
+{
+  "name": "tiramisu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acadet/tiramisu.git"
+  },
+  "author": "Adrien Cadet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acadet/tiramisu.git"
+  },
+  "homepage": "https://github.com/acadet/tiramisu#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
