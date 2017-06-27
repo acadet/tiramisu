@@ -1,15 +1,52 @@
 $main-layout: $red;
 
 .layouts {
-  .linearlayout {
-    @extend ._element;
+  .gridlayout {
+    @extend ._component;
+
+    .grid {
+      width: (((50 + 2*5) * 2) + 5px);
+    }
 
     .element {
-      margin: 1rem;
-      width: 200px;
+      display: inline-block;
+      margin: 5px;
+      width: 50px;
       height: 50px;
 
-      border-radius: 5px; 
+      border-radius: 5px;
+      background-color: $red;
+    }
+  }
+
+  .linearlayout {
+    @extend ._component;
+
+    .grid {
+      width: 250px;
+
+      .element {
+        &:nth-child(2) {
+          width: 50px;
+        }
+
+        &:nth-child(3) {
+          width: 100px;
+        }
+
+        &:nth-child(4) {
+          width: 50px;
+        }
+      }
+    }
+
+    .element {
+      display: inline-block;
+      margin: 5px;
+      width: (200px + 6*5px);
+      height: 50px;
+
+      border-radius: 5px;
       background-color: $red;
     }
   }
