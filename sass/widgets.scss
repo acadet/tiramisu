@@ -9,6 +9,8 @@ $dark-widget: darken($main-widget, 30%);
     padding: 1rem 3rem;
     vertical-align: top;
 
+    text-align: center;
+
     box-shadow: 0 0 5px 0 $grey;
 
     h4 {
@@ -58,6 +60,22 @@ $dark-widget: darken($main-widget, 30%);
     &:checked, &:active {
       background-color: $dark-widget;
       border-color: $light-widget;
+    }
+  }
+
+  .checkbox {
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+    border-radius: 5px;
+    @include appearance(initial);
+    outline: none;
+    background-color: $white;
+    border: 3px solid $main-widget;
+
+    &:checked, &:active {
+      background-color: $light-widget;
     }
   }
 }
