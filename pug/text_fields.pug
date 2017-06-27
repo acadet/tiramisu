@@ -3,4 +3,28 @@ section.textfields
   
   .field
     h4 Plain Text
-    input(type=text, value='John Doe')
+    input(type='text', value='John Doe')
+      
+  .field
+    h4 Password
+    input(type='password', value='password')
+      
+  .field
+    h4 Numeric Password
+    input(type='password', inputmode='numeric', pattern='[0-9]*', value='12345')
+      
+  .field
+    h4 Email
+    input(type='email', value='jake@square.com')
+          
+  .field
+    h4 Phone
+    input(type='tel', value='123-456-7890')
+      
+  .field
+    h4 Postal Address
+    input(type='text', value='45 Wall St')
+      
+  .field
+    h4 Multiline Text
+    textarea Some cause happiness wherever they go; others whenever they go.
