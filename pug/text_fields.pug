@@ -44,3 +44,21 @@ section.textfields
   .field
     h4 Number (Decimal)
     input(type='number', value='3.14')
+      
+  .field
+    h4 AutoCompleteTextView
+    datalist#fruits
+      option(value='Apple')
+      option(value='Banana')
+      option(value='Orange')
+      option(value='Raspberry')
+      option(value='Tomato')
+    input(type='text', placeholder='Fruit', list='fruits')
+      
+  .field
+    h4 MultiAutoCompleteTextView
+    datalist#emails
+      option(value='foo@gmail.outlook')
+      option(value='bar@yahoo.aol')
+      option(value='foobar@live.bob')
+    input(type='email', placeholder='Email', list='emails', multiple)
