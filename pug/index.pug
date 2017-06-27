@@ -27,10 +27,15 @@ html
           p.button Click me
         .widget
           h4 ToggleButton
-          input.toggle-button(type="checkbox")
+          input.togglebutton(type="checkbox")
         .widget
           h4 CheckBox
           input.checkbox(type="checkbox")
         .widget
           h4 RadioButton
           input.radiobutton(type="checkbox")
+        .widget
+          h4 CheckedTextView
+          form.checkedtextview
+            label(for="checkbox") Buy Chocolate
+            input.checkbox(label="checkbox", type="checkbox")
