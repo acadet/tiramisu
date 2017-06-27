@@ -3,44 +3,10 @@ header {
   background-color: $purple;
 }
 
-.widgets {
-  .widget {
-    display: inline-block;
-    padding: 1rem 3rem;
+section {
+  h3 {
+    margin: 0 0 1rem 0;
 
-    border-right: 2px solid $grey;
-
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
-      border-right: none;
-    }
-  }
-
-  .textview {
-    padding: 1rem;
-
-    color: $black;
-
-    background-color: $yellow;
-  }
-
-  .button {
-    padding: 1rem;
-
-    color: $white;
-
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: $blue;
-    border-bottom: 4px solid darken($blue, 30%);
-
-    &:active {
-      background-color: darken($blue, 30%);
-      border-bottom-color: $blue;
-    }
+    color: $grey;
   }
 }

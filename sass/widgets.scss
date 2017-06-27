@@ -1,0 +1,63 @@
+$main-widget: $blue;
+$light-widget: lighten($main-widget, 50%);
+$dark-widget: darken($main-widget, 30%);
+
+.widgets {
+  .widget {
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem 3rem;
+    vertical-align: top;
+
+    box-shadow: 0 0 5px 0 $grey;
+
+    h4 {
+      margin: 0 0 1rem 0;
+    }
+
+    *:nth-child(2) {
+      margin: 0;
+    }
+  }
+
+  .textview {
+    padding: 1rem;
+
+    color: $black;
+
+    background-color: $light-widget;
+  }
+
+  .button {
+    padding: 1rem;
+
+    color: $white;
+
+    cursor: pointer;
+    background-color: $main-widget;
+    border-radius: 5px;
+    border-bottom: 4px solid $dark-widget;
+
+    &:active {
+      background-color: $dark-widget;
+      border-bottom-color: $main-widget;
+    }
+  }
+
+  .toggle-button {
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+    border-radius: 50%;
+    @include appearance(initial);
+    outline: none;
+    background-color: $white;
+    border: 5px solid $main-widget;
+
+    &:checked, &:active {
+      background-color: $dark-widget;
+      border-color: $light-widget;
+    }
+  }
+}
