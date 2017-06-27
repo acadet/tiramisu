@@ -17,6 +17,10 @@ body {
 
 header, section {
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 1rem;
   @include box-sizing(border-box);
+
+  @media all and (min-width: $tablet) {
+    padding: 2rem 4rem;
+  }
 }
