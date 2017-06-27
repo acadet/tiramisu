@@ -1,1 +1,0 @@
-class IndexPresenter extends RxPresenter
