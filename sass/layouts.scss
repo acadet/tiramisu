@@ -3,7 +3,7 @@ $light-layout: lighten($main-layout, 30%);
 
 .layouts {
   .gridlayout {
-    @extend ._component;
+    @extend ._card;
 
     .grid {
       width: (((50 + 2*5) * 2) + 5px);
@@ -21,7 +21,7 @@ $light-layout: lighten($main-layout, 30%);
   }
 
   .framelayout {
-    @extend ._component;
+    @extend ._card;
 
     .grid {
       width: 150px;
@@ -51,7 +51,7 @@ $light-layout: lighten($main-layout, 30%);
   }
 
   .linearlayout {
-    @extend ._component;
+    @extend ._card;
 
     .grid {
       width: ((200px + 6*5px + 2*5px) + 5px);
