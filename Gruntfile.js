@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     var coffeeFiles = [
-        'coffee/FIXME.coffee',
+        
     ];
 
     // Project configuration
