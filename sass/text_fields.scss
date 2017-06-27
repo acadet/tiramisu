@@ -1,0 +1,23 @@
+$main-field: $yellow;
+$light-field: lighten($main-field, 10%);
+
+.textfields {
+  .field {
+    @extend ._card;
+
+    input {
+      padding: .5rem 1rem;
+
+      font-size: 1rem;
+      color: $black;
+
+      outline: none;
+      border: none;
+      border-bottom: 2px solid $main-field;
+
+      &:active, &:focus {
+        background-color: $light-field;
+      }
+    }
+  }
+}
