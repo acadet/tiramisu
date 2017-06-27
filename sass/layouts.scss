@@ -51,6 +51,38 @@ $light-layout: lighten($main-layout, 30%);
   }
 
   .linearlayout {
+
+
+
+    .framelayout {
+      @extend ._card;
+
+      .grid {
+        width: 150px;
+        height: 125px;
+        position: relative;
+
+        .element {
+          &:nth-child(1) {
+            background-color: $light-layout;
+          }
+
+          &:nth-child(2) {
+            right: 0px;
+            bottom: 0px;
+          }
+        }
+      }
+
+      .element {
+        position: absolute;
+        width: 100px;
+        height: 75px;
+
+        border-radius: 5px;
+        background-color: $red;
+      }
+    }
     @extend ._card;
 
     .grid {
@@ -76,6 +108,55 @@ $light-layout: lighten($main-layout, 30%);
       margin: 5px;
       width: (200px + 6*5px);
       height: 50px;
+
+      border-radius: 5px;
+      background-color: $red;
+    }
+  }
+
+  .relativelayout {
+    @extend ._card;
+
+    .grid {
+      width: 150px;
+      height: 120px;
+      position: relative;
+
+      .element {
+        &:nth-child(1) {
+          right: 60px;
+
+          width: 50px;
+          height: 25px;
+        }
+
+        &:nth-child(2) {
+          right: 0px;
+
+          width: 50px;
+          height: 25px;
+        }
+
+        &:nth-child(3) {
+          top: 35px;
+          left: 25px;
+
+          width: 100px;
+          height: 50px;
+        }
+
+        &:nth-child(4) {
+          bottom: 0;
+          left: 0;
+
+          width: 100px;
+          height: 25px;
+        }
+      }
+    }
+
+    .element {
+      position: absolute;
 
       border-radius: 5px;
       background-color: $red;
