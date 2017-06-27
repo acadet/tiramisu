@@ -1,0 +1,16 @@
+$main-layout: $red;
+
+.layouts {
+  .linearlayout {
+    @extend ._element;
+
+    .element {
+      margin: 1rem;
+      width: 200px;
+      height: 50px;
+
+      border-radius: 5px; 
+      background-color: $red;
+    }
+  }
+}

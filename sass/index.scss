@@ -5,8 +5,27 @@ header {
 
 section {
   h3 {
-    margin: 0 0 1rem 0;
+    margin: 1rem 0;
 
     color: $grey;
+
+    &:first-child {
+      margin-top: 0rem;
+    }
+  }
+}
+
+._element {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem 3rem;
+  vertical-align: top;
+
+  text-align: center;
+
+  box-shadow: 0 0 5px 0 $grey;
+
+  h4 {
+    margin: 0 0 1rem 0;
   }
 }
