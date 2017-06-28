@@ -269,4 +269,64 @@ $light-layout: lighten($main-layout, 30%);
       background-color: $red;
     }
   }
+
+  .tablelayout {
+    @extend ._card;
+
+    .grid {
+      position: relative;
+
+      width: 195px;
+      height: 60px;
+
+      .element {
+        position: absolute;
+
+        border-radius: 5px;
+        background-color: $red;
+
+        &:nth-child(1) {
+          width: 75px;
+          height: 25px;
+        }
+
+        &:nth-child(2) {
+          left: (75px + 10);
+
+          width: 50px;
+          height: 25px;
+        }
+
+        &:nth-child(3) {
+          left: ((75px + 10px) + 50px + 10px);
+
+          width: 50px;
+          height: 25px;
+        }
+
+        &:nth-child(4) {
+          top: (25px + 10px);
+
+          width: 50px;
+          height: 25px;
+        }
+
+        &:nth-child(5) {
+          top: (25px + 10px);
+          left: (50px + 10);
+
+          width: 75px;
+          height: 25px;
+        }
+
+        &:nth-child(6) {
+          top: (25px + 10px);
+          left: ((75px + 10px) + 50px + 10px);
+
+          width: 50px;
+          height: 25px;
+        }
+      }
+    }
+  }
 }
