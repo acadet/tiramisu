@@ -24,10 +24,13 @@ $dark-widget: darken($main-widget, 30%);
     padding: 1rem;
 
     color: $white;
+    font-size: 1rem;
 
-    cursor: pointer;
+    @include appearance(none);
+    outline: none;
     background-color: $main-widget;
     border-radius: 5px;
+    border: none;
     border-bottom: 4px solid $dark-widget;
 
     &:active {
@@ -123,10 +126,12 @@ $dark-widget: darken($main-widget, 30%);
     width: 50px;
     height: 50px;
 
+    border-radius: 50%;
     border: {
       top: 5px solid $main-widget;
       right: 5px solid $main-widget;
-      bottom: 5px solid $main-widget;
+      bottom: 5px solid $light-widget;
+      left: 5px solid $main-widget;
     }
 
     &:hover {
