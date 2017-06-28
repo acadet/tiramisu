@@ -62,22 +62,7 @@ $dark-widget: darken($main-widget, 30%);
   }
 
   .radiobutton {
-    width: 30px;
-    height: 30px;
-
-    cursor: pointer;
-    border-radius: 50%;
-    @include appearance(initial);
-    outline: none;
-    background-color: $white;
-    border: 4px solid $white;
-    box-shadow: 0 0 0 4px $main-widget;
-
-    @include transition(background-color .5s ease);
-
-    &:checked, &:active {
-      background-color: $main-widget;
-    }
+    @include radio-button($main-widget);
   }
 
   .checkedtextview {

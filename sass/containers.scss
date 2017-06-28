@@ -1,0 +1,25 @@
+$main-container: $teal;
+
+.containers {
+  .container {
+    @extend ._card;
+
+    .radiogroup {
+      margin: 1rem 0;
+      text-align: left;
+
+      p, input {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      input {
+        @include radio-button($main-container);
+      }
+
+      p {
+        margin: .5rem .5rem .5rem 1rem;
+      }
+    }
+  }
+}
