@@ -14,6 +14,7 @@ $dark-widget: darken($main-widget, 30%);
   .textview {
     padding: 1rem;
 
+    font-size: 1rem;
     color: $black;
 
     background-color: $light-widget;
@@ -104,7 +105,7 @@ $dark-widget: darken($main-widget, 30%);
     }
 
     label {
-      margin: 0 10px 0 0;
+      margin: 0 .5rem 0 0;
     }
   }
 
@@ -149,11 +150,26 @@ $dark-widget: darken($main-widget, 30%);
     }
 
     img {
-      margin: 0 10px 0 0;
+      margin: 0 .5rem 0 0;
       padding: .5rem;
 
       border: 2px solid $main-widget;
       background-color: $white;
+    }
+  }
+
+  .ratingbar {
+    color: $light-widget;
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    span {
+      @include transition(color .3s ease);
+
+      &:hover > span:first-child {
+        color: $blue;
+      }
     }
   }
 }
