@@ -46,6 +46,8 @@ $dark-widget: darken($main-widget, 30%);
     background-color: $white;
     border: 5px solid $main-widget;
 
+    @include transition(background-color .5s ease, border-color .5s ease);
+
     &:checked, &:active {
       background-color: $dark-widget;
       border-color: $light-widget;
@@ -63,8 +65,14 @@ $dark-widget: darken($main-widget, 30%);
     background-color: $white;
     border: 3px solid $main-widget;
 
+    @include transition(background-color .5s ease);
+
     &:checked, &:active {
-      background-color: $light-widget;
+      background: {
+        color: $light-widget;
+        size: cover;
+        image: url('checkmark.png');
+      }
     }
   }
 
@@ -80,10 +88,10 @@ $dark-widget: darken($main-widget, 30%);
     border: 4px solid $white;
     box-shadow: 0 0 0 4px $main-widget;
 
+    @include transition(background-color .5s ease);
+
     &:checked, &:active {
       background-color: $main-widget;
-      border-color: $white;
-      box-shadow: 0 0 0 4px $main-widget;
     }
   }
 
@@ -129,6 +137,23 @@ $dark-widget: darken($main-widget, 30%);
       @include animation-timing-function(ease);
       @include animation-duration(3s);
       @include animation-iteration-count(infinite);
+    }
+  }
+
+  .quickcontactbadge {
+    @extend .textview;
+
+    img, p {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    img {
+      margin: 0 10px 0 0;
+      padding: .5rem;
+
+      border: 2px solid $main-widget;
+      background-color: $white;
     }
   }
 }
