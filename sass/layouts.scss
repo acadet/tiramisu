@@ -329,4 +329,16 @@ $light-layout: lighten($main-layout, 30%);
       }
     }
   }
+
+  .tablerow {
+    @extend ._card;
+
+    .grid {
+      width: 125px;
+      height: 50px;
+
+      border-radius: 5px;
+      background-color: $red;
+    }
+  }
 }
