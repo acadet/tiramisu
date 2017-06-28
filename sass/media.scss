@@ -1,4 +1,5 @@
 $main-media: $purple;
+$light-media: lighten($purple, 40%);
 $dark-media: darken($purple, 30%);
 
 .media-section {
@@ -18,6 +19,11 @@ $dark-media: darken($purple, 30%);
         size: 24px 24px;
         repeat: no-repeat;
       }
+    }
+
+    .imageview, .videoview {
+      padding: 1rem;
+      background-color: $light-media;
     }
   }
 }
