@@ -172,4 +172,22 @@ $dark-widget: darken($main-widget, 30%);
       }
     }
   }
+
+  .switch {
+    width: 100px;
+    height: 25px;
+
+    cursor: pointer;
+    border-radius: 5px;
+    @include appearance(initial);
+    outline: none;
+    border: 3px solid $light-widget;
+    @include background-image(linear-gradient(left, $main-widget 30px, transparent 30px));
+
+    @include transition(background-position .5s ease);
+
+    &:checked, &:active {
+      background-position: 64.5px;
+    }
+  }
 }
