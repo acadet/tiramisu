@@ -190,4 +190,12 @@ $dark-widget: darken($main-widget, 30%);
       background-position: 64.5px;
     }
   }
+
+  .space {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    border: 5px dashed $main-widget;
+  }
 }
