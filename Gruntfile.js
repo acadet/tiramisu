@@ -7,9 +7,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     var coffeeFiles = [
-        
+
     ];
 
     // Project configuration
@@ -111,6 +112,20 @@ module.exports = function (grunt) {
                     'prod/all.js': 'prod/all_original.js'
                 }
             }
+        },
+        copy: {
+          dev: {
+            expand: true,
+            cwd: 'imgs',
+            src: '**',
+            dest: 'dev'
+          },
+          prod: {
+            expand: true,
+            cwd: 'imgs',
+            src: '**',
+            dest: 'prod'
+          }
         }
     });
 
@@ -119,13 +134,15 @@ module.exports = function (grunt) {
     grunt.registerTask('dev', [
         'coffee:dev',
         'pug:dev',
-        'sass:dev'
+        'sass:dev',
+        'copy:dev'
     ]);
 
     grunt.registerTask('prod', [
         'coffee:prod',
         'pug:prod',
         'sass:prod',
+        'copy:prod',
         'uglify'
     ]);
 };
