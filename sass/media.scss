@@ -1,0 +1,23 @@
+$main-media: $purple;
+$dark-media: darken($purple, 30%);
+
+.media-section {
+  .media {
+    @extend ._card;
+
+    .imagebutton {
+      @include button($main-media, $dark-media);
+
+      width: 48px;
+      height: 24px;
+      @include box-sizing(content-box);
+
+      background: {
+        image: url('image-white.png');
+        position: center;
+        size: 24px 24px;
+        repeat: no-repeat;
+      }
+    }
+  }
+}

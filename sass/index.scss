@@ -28,4 +28,27 @@ section {
   h4 {
     margin: 0 0 1rem 0;
   }
+
+  *:nth-child(2) {
+    margin: 0;
+  }
+}
+
+@mixin button($main, $dark) {
+  padding: 1rem;
+
+  color: $white;
+  font-size: 1rem;
+
+  @include appearance(none);
+  outline: none;
+  background-color: $main;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 4px solid $dark;
+
+  &:active {
+    background-color: $dark;
+    border-bottom-color: $main;
+  }
 }

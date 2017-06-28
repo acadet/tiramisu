@@ -5,10 +5,6 @@ $dark-widget: darken($main-widget, 30%);
 .widgets {
   .widget {
     @extend ._card;
-
-    *:nth-child(2) {
-      margin: 0;
-    }
   }
 
   .textview {
@@ -21,22 +17,7 @@ $dark-widget: darken($main-widget, 30%);
   }
 
   .button {
-    padding: 1rem;
-
-    color: $white;
-    font-size: 1rem;
-
-    @include appearance(none);
-    outline: none;
-    background-color: $main-widget;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 4px solid $dark-widget;
-
-    &:active {
-      background-color: $dark-widget;
-      border-bottom-color: $main-widget;
-    }
+    @include button($main-widget, $dark-widget);
   }
 
   .togglebutton {
