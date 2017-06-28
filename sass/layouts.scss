@@ -1,6 +1,5 @@
 $main-layout: $red;
 $light-layout: lighten($main-layout, 30%);
-$dark-layout: lighten($main-layout, 30%);
 
 .layouts {
   .coordinatorlayout {
@@ -73,7 +72,7 @@ $dark-layout: lighten($main-layout, 30%);
           height: 0px;
 
           border-radius: 5px;
-          background-color: $dark-layout;
+          background-color: $light-layout;
         }
       }
     }
@@ -83,16 +82,44 @@ $dark-layout: lighten($main-layout, 30%);
     @extend ._card;
 
     .grid {
-      width: (((50 + 2*5) * 2) + 5px);
+      position: relative;
+
+      width: 180px;
+      height: 115px;
 
       .element {
-        display: inline-block;
-        margin: 5px;
-        width: 50px;
-        height: 50px;
+        position: absolute;
 
         border-radius: 5px;
         background-color: $red;
+
+        &:nth-child(1) {
+          width: 25px;
+          height: 75px;
+        }
+
+        &:nth-child(2) {
+          top: (75px + 10px);
+          left: (25px + 10px);
+
+          width: 50px;
+          height: 25px;
+        }
+
+        &:nth-child(3) {
+          top: (75px + 10px);
+          left: (25px + 10px + 50px + 10px);
+
+          width: 50px;
+          height: 25px;
+        }
+
+        &:nth-child(4) {
+          right: 0px;
+
+          width: 25px;
+          height: 75px;
+        }
       }
     }
   }
@@ -107,12 +134,15 @@ $dark-layout: lighten($main-layout, 30%);
 
       .element {
         &:nth-child(1) {
+          z-index: 1;
+
           background-color: $light-layout;
         }
 
         &:nth-child(2) {
           right: 0px;
           bottom: 0px;
+          z-index: 2;
         }
       }
     }
