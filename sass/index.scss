@@ -71,3 +71,29 @@ section {
     background-color: $main;
   }
 }
+
+@mixin textblock($color) {
+  padding: 1rem;
+
+  font-size: 1rem;
+  color: $black;
+
+  background-color: $color;
+}
+
+@mixin badge($main, $light) {
+  @include textblock($light);
+
+  img, p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  img {
+    margin: 0 .5rem 0 0;
+    padding: .5rem;
+
+    border: 2px solid $main;
+    background-color: $white;
+  }
+}
