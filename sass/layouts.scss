@@ -272,7 +272,7 @@ $light-layout: lighten($main-layout, 30%);
     }
   }
 
-  .tablelayout {
+  .tablelayout, .tablerow {
     @extend ._card;
 
     .grid {
@@ -285,7 +285,6 @@ $light-layout: lighten($main-layout, 30%);
         position: absolute;
 
         border-radius: 5px;
-        background-color: $red;
 
         &:nth-child(1) {
           width: 75px;
@@ -332,15 +331,19 @@ $light-layout: lighten($main-layout, 30%);
     }
   }
 
+  .tablelayout {
+    .element {
+      background-color: $main-layout;
+    }
+  }
+
   .tablerow {
-    @extend ._card;
+    .element {
+      background-color: $light-layout;
 
-    .grid {
-      width: 125px;
-      height: 50px;
-
-      border-radius: 5px;
-      background-color: $red;
+      &:nth-child(5) {
+        background-color: $main-layout;
+      }
     }
   }
 }
