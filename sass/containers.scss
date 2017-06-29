@@ -71,5 +71,75 @@ $light-container: lighten($teal, 30%);
         }
       }
     }
+
+    .scrollview {
+      position: relative;
+
+      width: 200px;
+      height: 150px;
+      overflow: hidden;
+
+      .element {
+        position: absolute;
+
+        border-radius: 5px;
+
+        @include transition(top .5s ease);
+
+        &:first-child {
+          top: 0px;
+          right: 0px;
+          width: 10px;
+          height: 50px;
+
+          background-color: $main-container;
+        }
+
+        &:not(:first-child) {
+          background-color: $light-container;
+        }
+
+        &:nth-child(2) {
+          top: 0px;
+
+          width: 75px;
+          height: 50px;
+        }
+
+        &:nth-child(3) {
+          top: (50px + 10px);
+
+          width: 150px;
+          height: 100px;
+        }
+
+        &:nth-child(4) {
+          top: ((50px + 10px) + 100px + 10px);
+
+          width: 100px;
+          height: 50px;
+        }
+      }
+
+      &:hover {
+        .element {
+          &:nth-child(1) {
+            top: 100px;
+          }
+
+          &:nth-child(2) {
+            top: -70px;
+          }
+
+          &:nth-child(3) {
+            top: ((50px + 10px) - 70px);
+          }
+
+          &:nth-child(4) {
+            top: 100px;
+          }
+        }
+      }
+    }
   }
 }
