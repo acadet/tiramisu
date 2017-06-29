@@ -1,5 +1,6 @@
 $main-container: $teal;
 $light-container: lighten($teal, 30%);
+$dark-container: darken($teal, 30%);
 
 .containers {
   .container {
@@ -242,6 +243,46 @@ $light-container: lighten($teal, 30%);
         repeat: no-repeat;
         position: center;
         size: 48px 48px;
+      }
+    }
+
+    .searchview {
+      border: 2px solid $main-container;
+
+      input, button {
+        padding: .5rem;
+        font-size: 1rem;
+      }
+
+      input {
+        color: $black;
+
+        @include appearance(none);
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        @include transition(background-color .5s ease);
+
+        &:active, &:focus {
+          background-color: $light-container;
+        }
+      }
+
+      button {
+        margin-left: -5px;
+
+        color: $white;
+
+        @include appearance(none);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: $main-container;
+
+        &:active {
+          background-color: $dark-container;
+        }
       }
     }
   }
