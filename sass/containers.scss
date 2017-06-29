@@ -141,5 +141,75 @@ $light-container: lighten($teal, 30%);
         }
       }
     }
+
+    .horizontalscrollview {
+      position: relative;
+
+      width: 150px;
+      height: 200px;
+      overflow: hidden;
+
+      .element {
+        position: absolute;
+
+        border-radius: 5px;
+
+        @include transition(left .5s ease);
+
+        &:first-child {
+          bottom: 0px;
+          left: 0px;
+          width: 50px;
+          height: 10px;
+
+          background-color: $main-container;
+        }
+
+        &:not(:first-child) {
+          background-color: $light-container;
+        }
+
+        &:nth-child(2) {
+          left: 0px;
+
+          width: 50px;
+          height: 75px;
+        }
+
+        &:nth-child(3) {
+          left: (50px + 10px);
+
+          width: 100px;
+          height: 150px;
+        }
+
+        &:nth-child(4) {
+          left: ((50px + 10px) + 100px + 10px);
+
+          width: 50px;
+          height: 100px;
+        }
+      }
+
+      &:hover {
+        .element {
+          &:nth-child(1) {
+            left: 100px;
+          }
+
+          &:nth-child(2) {
+            left: -70px;
+          }
+
+          &:nth-child(3) {
+            left: ((50px + 10px) - 70px);
+          }
+
+          &:nth-child(4) {
+            left: 100px;
+          }
+        }
+      }
+    }
   }
 }
