@@ -1,13 +1,11 @@
 $main-layout: $red;
 $light-layout: lighten($main-layout, 30%);
 
-//TODO use transition instead of animation
-// PLUS define layout tag instead of extending for each item
 .layouts {
-  .coordinatorlayout {
+  .layout {
     @extend ._card;
 
-    .grid {
+    .coordinatorlayout {
       position: relative;
       width: 150px;
       height: 150px;
@@ -60,12 +58,8 @@ $light-layout: lighten($main-layout, 30%);
         }
       }
     }
-  }
 
-  .gridlayout {
-    @extend ._card;
-
-    .grid {
+    .gridlayout {
       position: relative;
 
       width: 180px;
@@ -106,17 +100,19 @@ $light-layout: lighten($main-layout, 30%);
         }
       }
     }
-  }
 
-  .framelayout {
-    @extend ._card;
-
-    .grid {
+    .framelayout {
       width: 150px;
       height: 125px;
       position: relative;
 
       .element {
+        position: absolute;
+        width: 100px;
+        height: 75px;
+
+        border-radius: 5px;
+
         &:nth-child(1) {
           z-index: 1;
 
@@ -127,59 +123,27 @@ $light-layout: lighten($main-layout, 30%);
           right: 0px;
           bottom: 0px;
           z-index: 2;
+
+          background-color: $red;
         }
       }
     }
 
-    .element {
-      position: absolute;
-      width: 100px;
-      height: 75px;
-
-      border-radius: 5px;
-      background-color: $red;
-    }
-  }
-
-  .linearlayout {
-
-
-
-    .framelayout {
-      @extend ._card;
-
-      .grid {
-        width: 150px;
-        height: 125px;
-        position: relative;
-
-        .element {
-          &:nth-child(1) {
-            background-color: $light-layout;
-          }
-
-          &:nth-child(2) {
-            right: 0px;
-            bottom: 0px;
-          }
-        }
-      }
-
-      .element {
-        position: absolute;
-        width: 100px;
-        height: 75px;
-
-        border-radius: 5px;
-        background-color: $red;
-      }
-    }
-    @extend ._card;
-
-    .grid {
+    .linearlayout {
       width: ((200px + 6*5px + 2*5px) + 5px);
 
       .element {
+        display: inline-block;
+        margin: 5px;
+        height: 50px;
+
+        border-radius: 5px;
+        background-color: $red;
+
+        &:nth-child(1) {
+          width: (200px + 6*5px);
+        }
+
         &:nth-child(2) {
           width: 50px;
         }
@@ -194,26 +158,17 @@ $light-layout: lighten($main-layout, 30%);
       }
     }
 
-    .element {
-      display: inline-block;
-      margin: 5px;
-      width: (200px + 6*5px);
-      height: 50px;
-
-      border-radius: 5px;
-      background-color: $red;
-    }
-  }
-
-  .relativelayout {
-    @extend ._card;
-
-    .grid {
+    .relativelayout {
       width: 150px;
       height: 120px;
       position: relative;
 
       .element {
+        position: absolute;
+
+        border-radius: 5px;
+        background-color: $red;
+
         &:nth-child(1) {
           right: 60px;
 
@@ -246,20 +201,8 @@ $light-layout: lighten($main-layout, 30%);
       }
     }
 
-    .element {
-      position: absolute;
-
-      border-radius: 5px;
-      background-color: $red;
-    }
-  }
-
-  .tablelayout, .tablerow {
-    @extend ._card;
-
-    .grid {
+    .tablelayout, .tablerow {
       position: relative;
-
       width: 195px;
       height: 60px;
 
@@ -311,20 +254,20 @@ $light-layout: lighten($main-layout, 30%);
         }
       }
     }
-  }
 
-  .tablelayout {
-    .element {
-      background-color: $main-layout;
-    }
-  }
-
-  .tablerow {
-    .element {
-      background-color: $light-layout;
-
-      &:nth-child(5) {
+    .tablelayout {
+      .element {
         background-color: $main-layout;
+      }
+    }
+
+    .tablerow {
+      .element {
+        background-color: $light-layout;
+
+        &:nth-child(5) {
+          background-color: $main-layout;
+        }
       }
     }
   }
