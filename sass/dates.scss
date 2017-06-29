@@ -1,0 +1,80 @@
+$main-date: $orange;
+$light-date: lighten($orange, 20%);
+
+.dates {
+  .date {
+    @extend ._card;
+
+    .timepicker {
+      position: relative;
+
+      width: 200px;
+      height: 200px;
+
+      > * {
+        position: absolute;
+      }
+
+      .circle, .noon, .three, .six, .nine {
+        border-radius: 50%;
+      }
+
+      .circle {
+        width: 200px;
+        height: 200px;
+
+        background-color: $light-date;
+      }
+
+      .noon, .three, .six, .nine {
+        width: 30px;
+        height: 30px;
+
+        background-color: $main-date;
+      }
+
+      .noon {
+        left: ((200px - 30px) / 2);
+      }
+
+      .three {
+        right: 0;
+        top: ((200px - 30px) / 2);
+      }
+
+      .six {
+        bottom: 0;
+        left: ((200px - 30px) / 2);
+      }
+
+      .nine {
+        top: ((200px - 30px) / 2);
+      }
+    }
+
+    .datepicker {
+      border: 5px solid $orange;
+
+      p {
+        margin: 0;
+      }
+
+      .up, .down {
+        padding: .5rem;
+
+        font-size: 1rem;
+        text-align: center;
+        color: $white;
+
+        background-color: $orange;
+      }
+
+      .picker {
+        padding: .5rem;
+
+        font-size: 2em;
+        color: $black;
+      }
+    }
+  }
+}
