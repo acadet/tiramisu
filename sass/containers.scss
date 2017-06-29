@@ -211,5 +211,25 @@ $light-container: lighten($teal, 30%);
         }
       }
     }
+
+    .tabhost {
+      width: 125px;
+      height: 25px;
+      margin: 0;
+
+      @include appearance(none);
+      cursor: pointer;
+      outline: none;
+      background-color: $light-container;
+      border-bottom: 1px solid $main-container;
+
+      &:checked {
+        border-bottom-width: 5px;
+      }
+
+      &:not(:first-child) {
+        margin-left: -5px;
+      }
+    }
   }
 }
