@@ -12,42 +12,10 @@ $light-layout: lighten($main-layout, 30%);
       width: 150px;
       height: 150px;
 
-      @keyframes top {
-        from { height: (90px + 60px); }
-        to { height: 90px; }
-      }
-
-      @keyframes icon {
-        from { bottom: 10px; }
-        to { bottom: (50px + 10px + 10px); }
-      }
-
-      @keyframes bottom {
-        from { height: 0px; }
-        to { height: 50px; }
-      }
-
-      &:hover .element {
-        @include animation-timing-function(ease);
-        @include animation-duration(1s);
-        @include animation-iteration-count(infinite);
-        @include animation-direction(alternate);
-
-        &:nth-child(1) {
-          @include animation-name(top);
-        }
-
-        &:nth-child(2) {
-          @include animation-name(icon);
-        }
-
-        &:nth-child(3) {
-          @include animation-name(bottom);
-        }
-      }
-
       .element {
         position: absolute;
+
+        @include transition(height .5s ease, bottom .5s ease);
 
         &:nth-child(1) {
           width: 150px;
@@ -75,6 +43,20 @@ $light-layout: lighten($main-layout, 30%);
 
           border-radius: 5px;
           background-color: $light-layout;
+        }
+      }
+
+      &:hover .element {
+        &:nth-child(1) {
+          height: 90px;
+        }
+
+        &:nth-child(2) {
+          bottom: (50px + 10px + 10px);
+        }
+
+        &:nth-child(3) {
+          height: 50px;
         }
       }
     }
