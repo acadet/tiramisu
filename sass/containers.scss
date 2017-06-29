@@ -48,5 +48,28 @@ $light-container: lighten($teal, 30%);
         }
       }
     }
+
+    .expandablelistview {
+        width: 125px;
+        display: inline-block;
+
+        input {
+        width: 125px;
+        height: 50px;
+        margin: .5rem 0;
+
+        @include appearance(none);
+        cursor: pointer;
+        background-color: $teal;
+        border-radius: 5px;
+        outline: none;
+
+        @include transition(height .5s ease);
+
+        &:active, &:checked {
+          height: 25px;
+        }
+      }
+    }
   }
 }
