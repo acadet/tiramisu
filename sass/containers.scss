@@ -29,5 +29,24 @@ $light-container: lighten($teal, 30%);
       text-align: left;
       margin: 1rem 0;
     }
+
+    .gridview {
+      width: (100px + 2*10px + 5px);
+
+      .element {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        display: inline-block;
+
+        border-radius: 5px;
+
+        @for $i from 1 through 4 {
+          &:nth-child(#{$i}) {
+            background-color: lighten($main-container, 40% - ($i*10%));
+          }
+        }
+      }
+    }
   }
 }
