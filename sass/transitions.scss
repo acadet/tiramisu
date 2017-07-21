@@ -2,6 +2,10 @@ $main-transition: $green;
 $light-transition: lighten($green, 20%);
 $dark-transition: darken($green, 20%);
 
+.transitions .note {
+  font-size: 1rem;
+}
+
 .transitions .transition {
   @extend ._card;
 
@@ -126,7 +130,7 @@ $dark-transition: darken($green, 20%);
 
       .element {
         position: absolute;
-        
+
         border-radius: 10px;
         background-color: $light-transition;
       }
