@@ -59,40 +59,86 @@ $dark-transition: darken($green, 20%);
   }
 
   .adapterviewflipper {
-    display: inline-block;
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 175px;
     overflow: hidden;
 
     border: 2px solid $main-transition;
 
-    p {
+    .layout {
       position: absolute;
-      width: 100px;
+      width: 250px;
 
-      font-size: 1.5rem;
-      color: $black;
-      text-align: center;
-
-      @include transition(left 1s ease);
+      @include transition(top 1s ease);
 
       &:first-child {
-        left: 0px;
+        top: 0px;
+
+        .element {
+
+          &:nth-child(1) {
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: 50px;
+          }
+
+          &:nth-child(2) {
+            top: (50px + 10px + 10px);
+            left: 10px;
+
+            width: 100px;
+            height: 50px;
+          }
+
+          &:nth-child(3) {
+            top: (10px + 50px + 10px);
+            left: (10px + 100px + 10px);
+
+            width: 100px;
+            height: 50px;
+          }
+        }
       }
 
       &:last-child {
-        left: 100px;
+        top: -175px;
+
+        .element {
+          &:first-child {
+            top: 10px;
+            right: 10px;
+
+            width: 125px;
+            height: 75px;
+          }
+
+          &:last-child {
+            top: (10px + 75px + 10px);
+            right: 10px;
+
+            width: 200px;
+            height: 25px;
+          }
+        }
+      }
+
+      .element {
+        position: absolute;
+        
+        border-radius: 10px;
+        background-color: $light-transition;
       }
     }
 
-    &:hover p {
+    &:hover .layout {
       &:first-child {
-        left: -100px;
+        top: 225px;
       }
 
       &:last-child {
-        left: 0px;
+        top: 0px;
       }
     }
   }
