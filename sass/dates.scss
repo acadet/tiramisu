@@ -139,5 +139,14 @@ $dark-date: darken($orange, 30%);
         text-align: center;
       }
     }
+
+    .textclock {
+      padding: .5rem 1rem;
+
+      font-size: 1rem;
+      color: $black;
+
+      border: 2px solid $main-date;
+    }
   }
 }
