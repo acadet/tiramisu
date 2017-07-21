@@ -57,10 +57,11 @@ $dark-transition: darken($green, 20%);
     }
   }
 
-  .adapterviewflipper {
+  .stackview {
     position: relative;
     width: (50px + 150px);
     height: (30px + 100px);
+    overflow: hidden;
 
     .element {
       position: absolute;
@@ -89,6 +90,14 @@ $dark-transition: darken($green, 20%);
 
         background-color: $dark-transition;
         z-index: 3;
+
+        @include transition(top .5s ease);
+      }
+    }
+
+    &:hover {
+      .element:nth-child(3) {
+        top: (30px + 100px);
       }
     }
   }
