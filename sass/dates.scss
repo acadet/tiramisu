@@ -99,7 +99,7 @@ $dark-date: darken($orange, 30%);
     }
 
     .datepicker {
-      border: 5px solid $orange;
+      border: 5px solid $main-date;
 
       p {
         margin: 0;
@@ -112,14 +112,31 @@ $dark-date: darken($orange, 30%);
         text-align: center;
         color: $white;
 
-        background-color: $orange;
+        background-color: $main-date;
       }
 
       .picker {
         padding: .5rem;
 
-        font-size: 2em;
+        font-size: 2rem;
         color: $black;
+      }
+    }
+
+    .chronometer {
+      width: 150px;
+      height: 150px;
+      @include display(flex);
+      @include justify-content(center);
+      @include flex-direction(column);
+
+      border: 3px solid $main-date;
+      border-radius: 50%;
+
+      p {
+        font-size: 2rem;
+        color: $black;
+        text-align: center;
       }
     }
   }
