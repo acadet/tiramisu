@@ -141,4 +141,43 @@ $dark-transition: darken($green, 20%);
       }
     }
   }
+
+  .textswitcher {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+
+    border: 2px solid $main-transition;
+
+    p {
+      position: absolute;
+      width: 100px;
+
+      font-size: 1.5rem;
+      color: $black;
+      text-align: center;
+
+      @include transition(left 1s ease);
+
+      &:first-child {
+        left: 0px;
+      }
+
+      &:last-child {
+        left: 100px;
+      }
+    }
+
+    &:hover p {
+      &:first-child {
+        left: -100px;
+      }
+
+      &:last-child {
+        left: 0px;
+      }
+    }
+  }
 }
