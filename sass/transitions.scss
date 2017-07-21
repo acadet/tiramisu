@@ -1,5 +1,6 @@
 $main-transition: $green;
 $light-transition: lighten($green, 20%);
+$dark-transition: darken($green, 20%);
 
 .transitions .transition {
   @extend ._card;
@@ -52,6 +53,42 @@ $light-transition: lighten($green, 20%);
 
       .triangle {
         left: ((100px - 50px) / 2);
+      }
+    }
+  }
+
+  .adapterviewflipper {
+    position: relative;
+    width: (50px + 150px);
+    height: (30px + 100px);
+
+    .element {
+      position: absolute;
+
+      width: 150px;
+      height: 100px;
+
+      border-radius: 10px;
+
+      &:nth-child(1) {
+        background-color: $light-transition;
+        z-index: 1;
+      }
+
+      &:nth-child(2) {
+        top: 15px;
+        left: 25px;
+
+        background-color: $main-transition;
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        top: 30px;
+        left: 50px;
+
+        background-color: $dark-transition;
+        z-index: 3;
       }
     }
   }
