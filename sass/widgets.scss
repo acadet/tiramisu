@@ -94,15 +94,10 @@ $dark-widget: darken($main-widget, 30%);
       left: 5px solid $main-widget;
     }
 
+    @include transition(transform 3s ease);
+
     &:hover {
-      @keyframes spinner {
-        from { @include transform(rotate(0deg)); }
-        to { @include transform(rotate(360deg)); }
-      }
-      @include animation-name(spinner);
-      @include animation-timing-function(ease);
-      @include animation-duration(3s);
-      @include animation-iteration-count(infinite);
+      @include transform(rotate(360deg));
     }
   }
 
