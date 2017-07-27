@@ -274,7 +274,7 @@ $dark-layout: darken($main-layout, 20%);
   .constraintlayout {
     position: relative;
     width: 200px;
-    height: 250px;
+    height: 200px;
 
     .element {
       position: absolute;
@@ -307,7 +307,7 @@ $dark-layout: darken($main-layout, 20%);
         left: ((200px - 125px) / 2);
 
         width: 125px;
-        height: 50px;
+        height: 25px;
       }
 
       &:nth-child(5) {
