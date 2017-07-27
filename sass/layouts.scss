@@ -318,4 +318,15 @@ $light-layout: lighten($main-layout, 30%);
       }
     }
   }
+
+  .cardview {
+    @extend ._card;
+    padding: .5rem;
+
+    .inner-content {
+      width: 150px;
+      height: 100px;
+      background-color: $light-layout;
+    }
+  }
 }
