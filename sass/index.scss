@@ -1,9 +1,54 @@
 header {
-  color: $white;
+  font-family: $header-font;
+
   background-color: $purple;
+
+  h1, h2, p {
+    color: $white;
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin: 3rem 0 .5rem 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 3rem 0;
+  }
+
+  p {
+    margin: 1rem 0;
+
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    a, a:visited {
+      padding: .2rem;
+
+      color: $white;
+      text-decoration: none;
+
+      background-color: transparent;
+      border-bottom: 2px solid $white;
+      @include transition(background-color .3s ease, color .3s ease);
+    }
+
+    a:hover {
+      color: $purple;
+
+      background-color: $white;
+    }
+  }
+
+  .android {
+    float: left;
+  }
 }
 
 section {
+  font-family: $section-font;
+
   h3 {
     margin: 1rem 0;
 
