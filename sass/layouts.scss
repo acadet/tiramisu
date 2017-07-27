@@ -1,273 +1,320 @@
 $main-layout: $red;
 $light-layout: lighten($main-layout, 30%);
 
-.layouts {
-  .layout {
-    @extend ._card;
+.layouts .layout {
+  @extend ._card;
 
-    .coordinatorlayout {
-      position: relative;
-      width: 150px;
-      height: 150px;
+  .coordinatorlayout {
+    position: relative;
+    width: 150px;
+    height: 150px;
 
-      .element {
-        position: absolute;
+    .element {
+      position: absolute;
 
-        @include transition(height .5s ease, bottom .5s ease);
+      @include transition(height .5s ease, bottom .5s ease);
 
-        &:nth-child(1) {
-          width: 150px;
-          height: (90px + 60px);
-
-          border-radius: 5px;
-          background-color: $light-layout;
-        }
-
-        &:nth-child(2) {
-          right: 10px;
-          bottom: 10px;
-
-          width: 30px;
-          height: 30px;
-
-          border-radius: 50%;
-          background-color: $main-layout;
-        }
-
-        &:nth-child(3) {
-          bottom: 0;
-          width: 150px;
-          height: 0px;
-
-          border-radius: 5px;
-          background-color: $light-layout;
-        }
-      }
-
-      &:hover .element {
-        &:nth-child(1) {
-          height: 90px;
-        }
-
-        &:nth-child(2) {
-          bottom: (50px + 10px + 10px);
-        }
-
-        &:nth-child(3) {
-          height: 50px;
-        }
-      }
-    }
-
-    .gridlayout {
-      position: relative;
-
-      width: 180px;
-      height: 115px;
-
-      .element {
-        position: absolute;
+      &:nth-child(1) {
+        width: 150px;
+        height: (90px + 60px);
 
         border-radius: 5px;
-        background-color: $red;
-
-        &:nth-child(1) {
-          width: 25px;
-          height: 75px;
-        }
-
-        &:nth-child(2) {
-          top: (75px + 10px);
-          left: (25px + 10px);
-
-          width: 50px;
-          height: 25px;
-        }
-
-        &:nth-child(3) {
-          top: (75px + 10px);
-          left: (25px + 10px + 50px + 10px);
-
-          width: 50px;
-          height: 25px;
-        }
-
-        &:nth-child(4) {
-          right: 0px;
-
-          width: 25px;
-          height: 75px;
-        }
+        background-color: $light-layout;
       }
-    }
 
-    .framelayout {
-      width: 150px;
-      height: 125px;
-      position: relative;
+      &:nth-child(2) {
+        right: 10px;
+        bottom: 10px;
 
-      .element {
-        position: absolute;
-        width: 100px;
-        height: 75px;
+        width: 30px;
+        height: 30px;
+
+        border-radius: 50%;
+        background-color: $main-layout;
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        width: 150px;
+        height: 0px;
 
         border-radius: 5px;
-
-        &:nth-child(1) {
-          z-index: 1;
-
-          background-color: $light-layout;
-        }
-
-        &:nth-child(2) {
-          right: 0px;
-          bottom: 0px;
-          z-index: 2;
-
-          background-color: $red;
-        }
+        background-color: $light-layout;
       }
     }
 
-    .linearlayout {
-      width: ((200px + 6*5px + 2*5px) + 5px);
+    &:hover .element {
+      &:nth-child(1) {
+        height: 90px;
+      }
 
-      .element {
-        display: inline-block;
-        margin: 5px;
+      &:nth-child(2) {
+        bottom: (50px + 10px + 10px);
+      }
+
+      &:nth-child(3) {
         height: 50px;
+      }
+    }
+  }
 
-        border-radius: 5px;
+  .gridlayout {
+    position: relative;
+
+    width: 180px;
+    height: 115px;
+
+    .element {
+      position: absolute;
+
+      border-radius: 5px;
+      background-color: $red;
+
+      &:nth-child(1) {
+        width: 25px;
+        height: 75px;
+      }
+
+      &:nth-child(2) {
+        top: (75px + 10px);
+        left: (25px + 10px);
+
+        width: 50px;
+        height: 25px;
+      }
+
+      &:nth-child(3) {
+        top: (75px + 10px);
+        left: (25px + 10px + 50px + 10px);
+
+        width: 50px;
+        height: 25px;
+      }
+
+      &:nth-child(4) {
+        right: 0px;
+
+        width: 25px;
+        height: 75px;
+      }
+    }
+  }
+
+  .framelayout {
+    width: 150px;
+    height: 125px;
+    position: relative;
+
+    .element {
+      position: absolute;
+      width: 100px;
+      height: 75px;
+
+      border-radius: 5px;
+
+      &:nth-child(1) {
+        z-index: 1;
+
+        background-color: $light-layout;
+      }
+
+      &:nth-child(2) {
+        right: 0px;
+        bottom: 0px;
+        z-index: 2;
+
         background-color: $red;
-
-        &:nth-child(1) {
-          width: (200px + 6*5px);
-        }
-
-        &:nth-child(2) {
-          width: 50px;
-        }
-
-        &:nth-child(3) {
-          width: 100px;
-        }
-
-        &:nth-child(4) {
-          width: 50px;
-        }
       }
     }
+  }
 
-    .relativelayout {
-      width: 150px;
-      height: 120px;
-      position: relative;
+  .linearlayout {
+    width: ((200px + 6*5px + 2*5px) + 5px);
 
-      .element {
-        position: absolute;
+    .element {
+      display: inline-block;
+      margin: 5px;
+      height: 50px;
 
-        border-radius: 5px;
-        background-color: $red;
+      border-radius: 5px;
+      background-color: $red;
 
-        &:nth-child(1) {
-          right: 60px;
+      &:nth-child(1) {
+        width: (200px + 6*5px);
+      }
 
-          width: 50px;
-          height: 25px;
-        }
+      &:nth-child(2) {
+        width: 50px;
+      }
 
-        &:nth-child(2) {
-          right: 0px;
+      &:nth-child(3) {
+        width: 100px;
+      }
 
-          width: 50px;
-          height: 25px;
-        }
-
-        &:nth-child(3) {
-          top: 35px;
-          left: 25px;
-
-          width: 100px;
-          height: 50px;
-        }
-
-        &:nth-child(4) {
-          bottom: 0;
-          left: 0;
-
-          width: 100px;
-          height: 25px;
-        }
+      &:nth-child(4) {
+        width: 50px;
       }
     }
+  }
 
-    .tablelayout, .tablerow {
-      position: relative;
-      width: 195px;
-      height: 60px;
+  .relativelayout {
+    width: 150px;
+    height: 120px;
+    position: relative;
 
-      .element {
-        position: absolute;
+    .element {
+      position: absolute;
 
-        border-radius: 5px;
+      border-radius: 5px;
+      background-color: $red;
 
-        &:nth-child(1) {
-          width: 75px;
-          height: 25px;
-        }
+      &:nth-child(1) {
+        right: 60px;
 
-        &:nth-child(2) {
-          left: (75px + 10);
+        width: 50px;
+        height: 25px;
+      }
 
-          width: 50px;
-          height: 25px;
-        }
+      &:nth-child(2) {
+        right: 0px;
 
-        &:nth-child(3) {
-          left: ((75px + 10px) + 50px + 10px);
+        width: 50px;
+        height: 25px;
+      }
 
-          width: 50px;
-          height: 25px;
-        }
+      &:nth-child(3) {
+        top: 35px;
+        left: 25px;
 
-        &:nth-child(4) {
-          top: (25px + 10px);
+        width: 100px;
+        height: 50px;
+      }
 
-          width: 50px;
-          height: 25px;
-        }
+      &:nth-child(4) {
+        bottom: 0;
+        left: 0;
 
-        &:nth-child(5) {
-          top: (25px + 10px);
-          left: (50px + 10);
-
-          width: 75px;
-          height: 25px;
-        }
-
-        &:nth-child(6) {
-          top: (25px + 10px);
-          left: ((75px + 10px) + 50px + 10px);
-
-          width: 50px;
-          height: 25px;
-        }
+        width: 100px;
+        height: 25px;
       }
     }
+  }
 
-    .tablelayout {
-      .element {
+  .tablelayout, .tablerow {
+    position: relative;
+    width: 195px;
+    height: 60px;
+
+    .element {
+      position: absolute;
+
+      border-radius: 5px;
+
+      &:nth-child(1) {
+        width: 75px;
+        height: 25px;
+      }
+
+      &:nth-child(2) {
+        left: (75px + 10);
+
+        width: 50px;
+        height: 25px;
+      }
+
+      &:nth-child(3) {
+        left: ((75px + 10px) + 50px + 10px);
+
+        width: 50px;
+        height: 25px;
+      }
+
+      &:nth-child(4) {
+        top: (25px + 10px);
+
+        width: 50px;
+        height: 25px;
+      }
+
+      &:nth-child(5) {
+        top: (25px + 10px);
+        left: (50px + 10);
+
+        width: 75px;
+        height: 25px;
+      }
+
+      &:nth-child(6) {
+        top: (25px + 10px);
+        left: ((75px + 10px) + 50px + 10px);
+
+        width: 50px;
+        height: 25px;
+      }
+    }
+  }
+
+  .tablelayout {
+    .element {
+      background-color: $main-layout;
+    }
+  }
+
+  .tablerow {
+    .element {
+      background-color: $light-layout;
+
+      &:nth-child(5) {
         background-color: $main-layout;
       }
     }
+  }
 
-    .tablerow {
-      .element {
-        background-color: $light-layout;
+  .constraintlayout {
+    position: relative;
+    width: 200px;
+    height: 250px;
 
-        &:nth-child(5) {
-          background-color: $main-layout;
-        }
+    .element {
+      position: absolute;
+
+      background-color: $main-layout;
+      border-radius: 5px;
+
+      &:nth-child(1) {
+        width: 200px;
+        height: 50px;
+      }
+
+      &:nth-child(2) {
+        top: (50px + 10px + (50px - 25px) / 2);
+
+        width: 50px;
+        height: 25px;
+      }
+
+      &:nth-child(3) {
+        top: (50px + 10px);
+        right: 0;
+
+        width: (200px - 50px - 10px);
+        height: 50px;
+      }
+
+      &:nth-child(4) {
+        top: (50px + 10px + 50px + 10px);
+        left: ((200px - 125px) / 2);
+
+        width: 125px;
+        height: 50px;
+      }
+
+      &:nth-child(5) {
+        bottom: 0px;
+        right: 30px;
+
+        width: 50px;
+        height: 25px;
       }
     }
   }
