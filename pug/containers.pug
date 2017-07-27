@@ -67,9 +67,12 @@ section.containers
   .container
     h4 TabHost
     
-    input.tabhost(type='radio', name='tabhost')
-    input.tabhost(type='radio', name='tabhost')
-    input.tabhost(type='radio', name='tabhost', checked)
+    .tabhost
+      input(type='radio', name='tabhost')
+      input(type='radio', name='tabhost')
+      input(type='radio', name='tabhost', checked)
+      
+      .layout
       
   .container
     h4 WebView
@@ -82,3 +85,6 @@ section.containers
     .searchview
       input(type='text', placeholder='Waldo')
       button Search
+      
+  p.note See also RecyclerView.
+    

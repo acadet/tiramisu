@@ -2,10 +2,6 @@ $main-transition: $green;
 $light-transition: lighten($green, 20%);
 $dark-transition: darken($green, 20%);
 
-.transitions .note {
-  font-size: 1rem;
-}
-
 .transitions .transition {
   @extend ._card;
 

@@ -58,6 +58,10 @@ section {
       margin-top: 0rem;
     }
   }
+
+  .note {
+    font-size: 1rem;
+  }
 }
 
 ._card {
@@ -141,5 +145,25 @@ section {
 
     border: 2px solid $main;
     background-color: $white;
+  }
+}
+
+@mixin tab($main, $light) {
+  width: 125px;
+  height: 25px;
+  margin: 0;
+
+  @include appearance(none);
+  cursor: pointer;
+  outline: none;
+  background-color: $light;
+  border-bottom: 1px solid $main;
+
+  &:checked {
+    border-bottom-width: 5px;
+  }
+
+  &:not(:first-child) {
+    margin-left: -5px;
   }
 }
