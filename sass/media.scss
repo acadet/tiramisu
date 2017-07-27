@@ -2,28 +2,77 @@ $main-media: $purple;
 $light-media: lighten($purple, 40%);
 $dark-media: darken($purple, 30%);
 
-.media-section {
-  .media {
-    @extend ._card;
+.media-section .media {
+  @extend ._card;
 
-    .imagebutton {
-      @include button($main-media, $dark-media);
+  .imagebutton {
+    @include button($main-media, $dark-media);
 
-      width: 48px;
-      height: 24px;
-      @include box-sizing(content-box);
+    width: 48px;
+    height: 24px;
+    @include box-sizing(content-box);
 
-      background: {
-        image: url('image-white.png');
-        position: center;
-        size: 24px 24px;
-        repeat: no-repeat;
+    background: {
+      image: url('image-white.png');
+      position: center;
+      size: 24px 24px;
+      repeat: no-repeat;
+    }
+  }
+
+  .imageview, .videoview {
+    padding: 1rem;
+    background-color: $light-media;
+  }
+
+  .floatingactionbutton {
+    p, .button {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    p {
+      margin: .5rem;
+      padding: .5rem 1rem;
+
+      color: $black;
+
+      opacity: 0;
+      background-color: $light-media;
+
+      @include transition(opacity .5s ease);
+    }
+
+    .button {
+      width: 50px;
+      height: 50px;
+
+      background-color: $main-media;
+      border-radius: 50%;
+
+      @include transition(transform .5s ease);
+
+      .shape {
+        width: 0;
+        height: 0;
+        margin: 12.5px 0 0 17px;
+
+        border: {
+          style: solid;
+          width: 12.5px 0 12.5px 21.7px;
+          color: transparent transparent transparent $white;
+        }
       }
     }
 
-    .imageview, .videoview {
-      padding: 1rem;
-      background-color: $light-media;
+    &:hover {
+      p {
+        opacity: 1;
+      }
+
+      .button {
+        @include transform(rotate(180deg));
+      }
     }
   }
 }

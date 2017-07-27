@@ -2,10 +2,8 @@ $main-widget: $blue;
 $light-widget: lighten($main-widget, 50%);
 $dark-widget: darken($main-widget, 30%);
 
-.widgets {
-  .widget {
-    @extend ._card;
-  }
+.widgets .widget {
+  @extend ._card;
 
   .textview {
     @include textblock($light-widget);
@@ -151,56 +149,5 @@ $dark-widget: darken($main-widget, 30%);
     height: 50px;
 
     border: 5px dashed $main-widget;
-  }
-
-  .floatingactionbutton {
-    p, .button {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    p {
-      margin: .5rem;
-      padding: .5rem 1rem;
-
-      color: $main-widget;
-
-      opacity: 0;
-      background-color: $light-widget;
-
-      @include transition(opacity .5s ease);
-    }
-
-    .button {
-      width: 50px;
-      height: 50px;
-
-      background-color: $main-widget;
-      border-radius: 50%;
-
-      @include transition(transform .5s ease);
-
-      .shape {
-        width: 0;
-        height: 0;
-        margin: 12.5px 0 0 17px;
-
-        border: {
-          style: solid;
-          width: 12.5px 0 12.5px 21.7px;
-          color: transparent transparent transparent $white;
-        }
-      }
-    }
-
-    &:hover {
-      p {
-        opacity: 1;
-      }
-
-      .button {
-        @include transform(rotate(180deg));
-      }
-    }
   }
 }
