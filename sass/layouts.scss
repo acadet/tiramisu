@@ -319,7 +319,7 @@ $light-layout: lighten($main-layout, 30%);
     }
   }
 
-  .tablayout {
+  .tablayout, .tabitem {
     input {
       @include tab($main-layout, $light-layout);
     }
