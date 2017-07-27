@@ -6,50 +6,50 @@ section.widgets
     p.textview Cupcake Ipsum Dolor Sit Amet
 
   .widget
-    h4 Button
+    +card_header('Button')
     button.button Click me
   
   .widget
-    h4 ToggleButton
+    +card_header('ToggleButton')
     input.togglebutton(type="checkbox")
   
   .widget
-    h4 CheckBox
+    +card_header('CheckBox')
     input.checkbox(type="checkbox")
   
   .widget
-    h4 RadioButton
+    +card_header('RadioButton')
     input.radiobutton(type="checkbox")
   
   .widget
-    h4 CheckedTextView
+    +card_header('CheckedTextView')
     form.checkedtextview
       label(for="checkbox") Buy Chocolate
       input.checkbox(label="checkbox", type="checkbox")
         
   .widget
-    h4 Spinner
+    +card_header('Spinner')
     select.spinner
       option Marshmallow
       option Nougat
       option Oreo
       
   .widget
-    h4 ProgressBar
+    +card_header('ProgressBar')
     .progressbar
       
   .widget
-    h4 SeekBar
+    +card_header('SeekBar')
     input.seekbar(type='range', min=1, max=10, step=1)
       
   .widget
-    h4 QuickContactBadge
+    +card_header('QuickContactBadge')
     .quickcontactbadge
       img(src='avatar-blue.png', width='24px', height='24px')
       p Anthony Kiedis
 
   .widget
-    h4 RatingBar
+    +card_header('RatingBar')
     p.ratingbar 
       span 
         span &#9734;
@@ -59,9 +59,9 @@ section.widgets
             span &#9734;
             
   .widget
-    h4 Switch
+    +card_header('Switch')
     input.switch(type="checkbox")
       
   .widget
-    h4 Space
+    +card_header('Space')
     .space
