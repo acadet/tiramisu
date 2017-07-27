@@ -1,5 +1,6 @@
 $main-field: $yellow;
 $light-field: lighten($main-field, 10%);
+$dark-field: darken($main-field, 20%);
 
 .textfields {
   .field {
@@ -27,6 +28,25 @@ $light-field: lighten($main-field, 10%);
       min-height: 75px;
 
       line-height: 1.2rem;
+    }
+
+    .textinputlayout {
+      input {
+        width: 250px;
+      }
+
+      p {
+        text-align: right;
+        color: $dark-field;
+
+        opacity: 0;
+
+        @include transition(opacity .5s ease);
+      }
+
+      input:valid + p {
+        opacity: 1;
+      }
     }
   }
 }
