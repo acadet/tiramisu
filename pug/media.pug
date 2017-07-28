@@ -2,19 +2,22 @@ section.media-section
   h3 Media
   
   .media
-    h4 ImageButton
+    +card_header('ImageButton')
+    
     button.imagebutton
       
   .media
-    h4 ImageView
+    +card_header('ImageView')
+    
     img.imageview(src='image.png', width='48px', height='48px')
           
   .media
-    h4 VideoView
+    +card_header('VideoView')
+    
     img.videoview(src='video.png', width='48px', height='48px')
       
   .media
-    h4 FloatingActionButton
+    +support_card_header('FloatingActionButton')
     
     .floatingactionbutton
       p Hope
