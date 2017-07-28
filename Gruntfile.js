@@ -46,7 +46,8 @@ module.exports = function (grunt) {
             },
             prod: {
                 options: {
-                    pretty: true
+                    pretty: false,
+                    outputStyle: 'compressed'
                 },
                 files: {
                     'prod/index.html': 'pug/index.pug'
