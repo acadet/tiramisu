@@ -21,7 +21,7 @@ header {
     margin: 1rem 0;
 
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
 
     a, a:visited {
       padding: .2rem;
@@ -53,14 +53,26 @@ section {
     margin: 1rem 0;
 
     color: $grey;
+    font: {
+      weight: bold;
+      size: 1.2rem;
+    }
 
     &:first-child {
       margin-top: 0rem;
     }
   }
 
-  .note {
+  p {
     font-size: 1rem;
+
+    &:not(.note) {
+      margin: 0;
+    }
+
+    &.note {
+      margin: 1rem 0;
+    }
   }
 }
 
@@ -145,7 +157,6 @@ section {
 @mixin textblock($color) {
   padding: 1rem;
 
-  font-size: 1rem;
   color: $black;
 
   background-color: $color;
