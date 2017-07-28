@@ -2,7 +2,7 @@ section.dates
   h3 Date &#38; Time
   
   .date
-    h4 TimePicker
+    +card_header('TimePicker')
     
     .timepicker
       .circle
@@ -14,7 +14,7 @@ section.dates
       .selected
 
   .date
-    h4 DatePicker
+    +card_header('DatePicker')
     
     .datepicker
       p.up &#8593;
@@ -22,7 +22,7 @@ section.dates
       p.down &#8595;
       
   .date
-    h4 CalendarView
+    +card_header('CalendarView')
     
     table.calendarview
       thead
@@ -49,12 +49,12 @@ section.dates
           td 11
       
   .date
-    h4 Chronometer
+    +card_header('Chronometer')
     
     .chronometer
       p 5'14
       
   .date
-    h4 TextClock
+    +card_header('TextClock')
     
     p.textclock 18:26 (Paris, Brussels, Madrid)
