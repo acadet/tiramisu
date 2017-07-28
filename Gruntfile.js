@@ -116,17 +116,17 @@ module.exports = function (grunt) {
         },
         copy: {
           dev: {
+            src: ['imgs/**', 'favicon/**'],
+            dest: 'dev/',
             expand: true,
-            cwd: 'imgs',
-            src: '**',
-            dest: 'dev'
+            flatten: true
           },
           prod: {
+            src: ['imgs/**', 'favicon/**'],
+            dest: 'prod/',
             expand: true,
-            cwd: 'imgs',
-            src: '**',
-            dest: 'prod'
-          }
+            flatten: true
+          },
         }
     });
 
@@ -136,14 +136,13 @@ module.exports = function (grunt) {
         'coffee:dev',
         'pug:dev',
         'sass:dev',
-        'copy:dev'
+        'copy:dev',
     ]);
 
     grunt.registerTask('prod', [
         'coffee:prod',
         'pug:prod',
         'sass:prod',
-        'copy:prod',
-        'uglify'
+        'copy:prod'
     ]);
 };
