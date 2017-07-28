@@ -46,7 +46,8 @@ section.textfields
     input(type='number', value='3.14')
       
   .field
-    h4 AutoCompleteTextView
+    +card_header('AutoCompleteTextView')
+    
     datalist#fruits
       option(value='Apple')
       option(value='Banana')
@@ -56,7 +57,8 @@ section.textfields
     input(type='text', placeholder='Fruit', list='fruits')
       
   .field
-    h4 MultiAutoCompleteTextView
+    +card_header('MultiAutoCompleteTextView')
+
     datalist#emails
       option(value='romain@guy.google')
       option(value='chet@haase.google')
@@ -64,7 +66,7 @@ section.textfields
     input(type='email', placeholder='Email', list='emails', multiple)
       
   .field
-    h4 TextInputLayout
+    +support_card_header('TextInputLayout')
     
     .textinputlayout
       input(type='text', placeholder='Latest country you visited', required)
