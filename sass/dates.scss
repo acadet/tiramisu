@@ -17,7 +17,7 @@ $dark-date: darken($orange, 30%);
       }
 
       .circle, .noon, .three, .six, .nine, .selected {
-        border-radius: 50%;
+        @include circle-radius();
       }
 
       .circle {
@@ -68,7 +68,7 @@ $dark-date: darken($orange, 30%);
         width: (200px / 2);
         height: 5px;
 
-        border-radius: 10px;
+        @include rectangle-radius();
         @include transform(rotate(-45deg));
         @include transform-origin(left);
 
@@ -167,7 +167,7 @@ $dark-date: darken($orange, 30%);
       @include flex-direction(column);
 
       border: 3px solid $main-date;
-      border-radius: 50%;
+      @include circle-radius();
 
       p {
         font-size: 2rem;

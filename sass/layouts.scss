@@ -19,7 +19,7 @@ $dark-layout: darken($main-layout, 20%);
         width: 150px;
         height: (90px + 60px);
 
-        border-radius: 5px;
+        @include rectangle-radius();
         background-color: $light-layout;
       }
 
@@ -30,7 +30,7 @@ $dark-layout: darken($main-layout, 20%);
         width: 30px;
         height: 30px;
 
-        border-radius: 50%;
+        @include circle-radius();
         background-color: $main-layout;
       }
 
@@ -39,7 +39,7 @@ $dark-layout: darken($main-layout, 20%);
         width: 150px;
         height: 0px;
 
-        border-radius: 5px;
+        @include rectangle-radius();
         background-color: $light-layout;
       }
     }
@@ -68,7 +68,7 @@ $dark-layout: darken($main-layout, 20%);
     .element {
       position: absolute;
 
-      border-radius: 5px;
+      @include rectangle-radius();
       background-color: $red;
 
       &:nth-child(1) {
@@ -111,7 +111,7 @@ $dark-layout: darken($main-layout, 20%);
       width: 100px;
       height: 75px;
 
-      border-radius: 5px;
+      @include rectangle-radius();
 
       &:nth-child(1) {
         z-index: 1;
@@ -137,7 +137,7 @@ $dark-layout: darken($main-layout, 20%);
       margin: 5px;
       height: 50px;
 
-      border-radius: 5px;
+      @include rectangle-radius();
       background-color: $red;
 
       &:nth-child(1) {
@@ -166,7 +166,7 @@ $dark-layout: darken($main-layout, 20%);
     .element {
       position: absolute;
 
-      border-radius: 5px;
+      @include rectangle-radius();
       background-color: $red;
 
       &:nth-child(1) {
@@ -209,7 +209,7 @@ $dark-layout: darken($main-layout, 20%);
     .element {
       position: absolute;
 
-      border-radius: 5px;
+      @include rectangle-radius();
 
       &:nth-child(1) {
         width: 75px;
@@ -280,7 +280,7 @@ $dark-layout: darken($main-layout, 20%);
       position: absolute;
 
       background-color: $main-layout;
-      border-radius: 5px;
+      @include rectangle-radius();
 
       &:nth-child(1) {
         width: 200px;
@@ -330,7 +330,7 @@ $dark-layout: darken($main-layout, 20%);
     .element {
       position: absolute;
 
-      border-radius: 5px;
+      @include rectangle-radius();
 
       &:nth-child(1) {
         top: 60px;

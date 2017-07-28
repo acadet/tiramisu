@@ -48,7 +48,7 @@ $dark-media: darken($purple, 30%);
       height: 50px;
 
       background-color: $main-media;
-      border-radius: 50%;
+      @include circle-radius();
 
       @include transition(transform .5s ease);
 

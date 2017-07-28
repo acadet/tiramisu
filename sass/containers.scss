@@ -40,7 +40,7 @@ $dark-container: darken($teal, 30%);
         margin: 5px;
         display: inline-block;
 
-        border-radius: 5px;
+        @include rectangle-radius();
 
         @for $i from 1 through 4 {
           &:nth-child(#{$i}) {
@@ -62,7 +62,7 @@ $dark-container: darken($teal, 30%);
         @include appearance(none);
         cursor: pointer;
         background-color: $teal;
-        border-radius: 5px;
+        @include rectangle-radius();
         outline: none;
 
         @include transition(height .5s ease);
@@ -83,7 +83,7 @@ $dark-container: darken($teal, 30%);
       .element {
         position: absolute;
 
-        border-radius: 5px;
+        @include rectangle-radius();
 
         @include transition(top .5s ease);
 
@@ -153,7 +153,7 @@ $dark-container: darken($teal, 30%);
       .element {
         position: absolute;
 
-        border-radius: 5px;
+        @include rectangle-radius();
 
         @include transition(left .5s ease);
 

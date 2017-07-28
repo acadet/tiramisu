@@ -18,7 +18,7 @@ $dark-widget: darken($main-widget, 30%);
     height: 50px;
 
     cursor: pointer;
-    border-radius: 50%;
+    @include circle-radius();
     @include appearance(initial);
     outline: none;
     background-color: $white;
@@ -37,7 +37,7 @@ $dark-widget: darken($main-widget, 30%);
     height: 30px;
 
     cursor: pointer;
-    border-radius: 5px;
+    @include rectangle-radius();
     @include appearance(initial);
     outline: none;
     background-color: $white;
@@ -86,7 +86,7 @@ $dark-widget: darken($main-widget, 30%);
     width: 50px;
     height: 50px;
 
-    border-radius: 50%;
+    @include circle-radius();
     border: {
       top: 5px solid $main-widget;
       right: 5px solid $main-widget;
@@ -125,7 +125,7 @@ $dark-widget: darken($main-widget, 30%);
     height: 25px;
 
     cursor: pointer;
-    border-radius: 5px;
+    @include rectangle-radius();
     @include appearance(initial);
     outline: none;
     border: 3px solid $light-widget;

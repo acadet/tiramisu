@@ -125,7 +125,7 @@ section {
   outline: none;
   cursor: pointer;
   background-color: $main;
-  border-radius: 5px;
+  @include rectangle-radius();
   border: none;
   border-bottom: 4px solid $dark;
 
@@ -140,7 +140,7 @@ section {
   height: 30px;
 
   cursor: pointer;
-  border-radius: 50%;
+  @include circle-radius();
   @include appearance(initial);
   outline: none;
   background-color: $white;

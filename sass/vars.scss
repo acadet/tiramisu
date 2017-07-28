@@ -14,3 +14,11 @@ $purple: #7e50c0;
 $yellow: #f9dd79;
 $orange: #f27772;
 $green: #99ce64;
+
+@mixin rectangle-radius() {
+  border-radius: 5px;
+}
+
+@mixin circle-radius() {
+  border-radius: 50%;
+}
