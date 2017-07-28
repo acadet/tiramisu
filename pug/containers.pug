@@ -2,7 +2,7 @@ section.containers
   h3 Containers
   
   .container
-    h4 RadioGroup
+    +card_header('RadioGroup')
     
     .radiogroup
       input(type='radio', name='radiogroup', checked)
@@ -15,7 +15,7 @@ section.containers
       p SQLite
       
   .container
-    h4 ListView
+    +card_header('ListView')
     
     .listview
       img(src='avatar-teal-1.png', width='24px', height='24px')
@@ -30,7 +30,7 @@ section.containers
       p Dan Lew
       
   .container
-    h4 GridView
+    +card_header('GridView')
     
     .gridview
       .element
@@ -39,7 +39,7 @@ section.containers
       .element
 
   .container
-    h4 ExpandableListView
+    +card_header('ExpandableListView')
     
     .expandablelistview
       input(type='checkbox', checked)
@@ -47,7 +47,7 @@ section.containers
       input(type='checkbox')
         
   .container
-    h4 ScrollView
+    +card_header('ScrollView')
     
     .scrollview
       .element
@@ -56,7 +56,7 @@ section.containers
       .element
         
   .container
-    h4 HorizontalScrollView
+    +card_header('HorizontalScrollView')
     
     .horizontalscrollview
       .element
@@ -65,7 +65,7 @@ section.containers
       .element
         
   .container
-    h4 TabHost
+    +card_header('TabHost')
     
     .tabhost
       input(type='radio', name='tabhost')
@@ -75,19 +75,19 @@ section.containers
       .layout
       
   .container
-    h4 WebView
+    +card_header('WebView')
     
     .webview
       
   .container
-    h4 SearchView
+    +card_header('SearchView')
     
     .searchview
       input(type='text', placeholder='Waldo')
       button Search
       
   .container
-    h4 Toolbar
+    +card_header('Toolbar')
     
     .toolbar
       button
