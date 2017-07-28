@@ -6,4 +6,4 @@ build:
 	cp -a $(src). ./
 
 clean:
-	rm !(Makefile)
+	rm -rf *.png *.html *.css *.js *.json *.ico *.xml
