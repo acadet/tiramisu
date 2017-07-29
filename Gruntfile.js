@@ -46,8 +46,7 @@ module.exports = function (grunt) {
             },
             prod: {
                 options: {
-                    pretty: false,
-                    outputStyle: 'compressed'
+                    pretty: false
                 },
                 files: {
                     'prod/index.html': 'pug/index.pug'
@@ -65,7 +64,8 @@ module.exports = function (grunt) {
             },
             prod: {
                 options: {
-                    sourcemap: 'none'
+                    sourcemap: 'none',
+                    outputStyle: 'compressed'
                 },
                 files: {
                     'prod/all.css': 'sass/all.scss'
