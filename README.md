@@ -2,7 +2,7 @@
 
 **Complete list of Android SDK UI components.**
 
-Overview any widget the Android SDK offers in a single webpage.
+Overview any widget the Android SDK offers, within a single webpage.
 
 ## Credits
 
